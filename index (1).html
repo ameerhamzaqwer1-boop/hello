@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kitchen Craft PK — Smart Kitchen, Better Life</title>
+<meta name="description" content="Karahi, degchi, chimta, hot pot, dinner set aur baaqi kitchen samaan. 75 items, rate ke saath. Order seedha WhatsApp par.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#052114;
+  --bg2:#07291B;
+  --panel:#0A3220;
+  --panel-hi:#0E4029;
+  --text:#F6F2E7;
+  --muted:#A6BCAD;
+  --line:rgba(231,185,62,.22);
+  --line-hard:rgba(231,185,62,.5);
+  --gold:#E7B93E;
+  --gold-soft:#FAD163;
+  --gold-ink:#20160A;
+  --chili:#E0705C;
+  --glow:0 22px 46px -22px rgba(0,0,0,.85), 0 0 0 1px var(--line-hard);
+  --display:"Fraunces",Georgia,serif;
+  --body:"IBM Plex Sans","Segoe UI",sans-serif;
+  --urdu:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;
+  --max:1200px;
+}
+:root[data-theme="light"]{
+  --bg:#F4F1E6;
+  --bg2:#EDE9DA;
+  --panel:#FFFFFF;
+  --panel-hi:#FFFDF6;
+  --text:#062016;
+  --muted:#5C6E63;
+  --line:rgba(6,32,22,.16);
+  --line-hard:rgba(184,137,28,.7);
+  --gold:#A9781A;
+  --gold-soft:#C99A2A;
+  --gold-ink:#FFFDF4;
+  --chili:#A8382A;
+  --glow:0 22px 40px -24px rgba(6,32,22,.35), 0 0 0 1px var(--line-hard);
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#F4F1E6; --bg2:#EDE9DA; --panel:#FFFFFF; --panel-hi:#FFFDF6;
+    --text:#062016; --muted:#5C6E63; --line:rgba(6,32,22,.16); --line-hard:rgba(184,137,28,.7);
+    --gold:#A9781A; --gold-soft:#C99A2A; --gold-ink:#FFFDF4; --chili:#A8382A;
+    --glow:0 22px 40px -24px rgba(6,32,22,.35), 0 0 0 1px var(--line-hard);
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--body);font-size:16px;line-height:1.55;padding-bottom:86px;
+}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;letter-spacing:-.015em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:14px;min-height:66px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand img{height:38px;width:auto;display:block;border-radius:4px}
+.brand .bt{display:flex;flex-direction:column;line-height:1.05}
+.brand b{font-family:var(--display);font-weight:900;font-size:19px;letter-spacing:-.02em}
+.brand b i{font-style:normal;color:var(--gold)}
+.brand small{font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+.top nav{margin-left:auto;display:flex;gap:24px;font-size:14.5px}
+.top nav a{text-decoration:none;color:var(--muted);padding:3px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.top nav a:hover{color:var(--text);border-bottom-color:var(--gold)}
+.wa{
+  display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--gold-ink);
+  text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 17px;border-radius:999px;border:0;cursor:pointer;
+  font-family:var(--body);transition:transform .18s,filter .18s;
+}
+.wa:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.wa svg{width:16px;height:16px;fill:currentColor}
+.theme{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:999px;width:36px;height:36px;cursor:pointer;font-size:14px;transition:color .2s,border-color .2s}
+.theme:hover{color:var(--gold);border-color:var(--gold)}
+@media(max-width:900px){ .top nav{display:none} .brand small{display:none} }
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 120% at 88% 12%, var(--panel) 0%, var(--bg) 62%);
+  border-bottom:1px solid var(--line);padding:56px 0 46px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,7vw,78px);font-weight:900;letter-spacing:-.035em}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:700}
+.hero .urdu-line{font-family:var(--urdu);font-size:clamp(16px,2.6vw,24px);margin-top:20px;color:var(--gold-soft);direction:rtl;line-height:2.2}
+.hero p.lede{font-size:17px;max-width:48ch;margin:16px 0 0;color:var(--muted)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.ghost{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-hard);color:inherit;text-decoration:none;padding:10px 17px;border-radius:999px;font-size:14.5px;font-weight:500;transition:background .2s}
+.ghost:hover{background:var(--panel)}
+.logo-card{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#052114;box-shadow:var(--glow)}
+.logo-card img{display:block;width:100%;height:auto}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:34px}
+.fact{background:var(--bg);padding:16px 18px}
+.fact b{display:block;font-family:var(--display);font-size:24px;font-weight:700;color:var(--gold)}
+.fact span{font-size:13.5px;color:var(--muted)}
+@media(max-width:900px){ .hero-grid{grid-template-columns:1fr;gap:30px} .logo-card{max-width:320px} .hero{padding:34px 0 30px} }
+
+/* ---------- controls ---------- */
+.controls{position:sticky;top:66px;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.controls-in{display:flex;align-items:center;gap:14px;padding:12px 20px;max-width:var(--max);margin:0 auto}
+.search{flex:0 1 300px;position:relative}
+.search input{
+  width:100%;padding:10px 14px;border:1px solid var(--line);background:var(--panel);color:var(--text);
+  border-radius:999px;font-family:var(--body);font-size:15px;
+}
+.search input::placeholder{color:var(--muted)}
+.rail{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.rail::-webkit-scrollbar{display:none}
+.chip{
+  flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--muted);
+  padding:8px 14px;border-radius:999px;font-family:var(--body);font-size:14px;cursor:pointer;white-space:nowrap;
+  transition:color .2s,border-color .2s,background .2s;
+}
+.chip:hover{border-color:var(--gold);color:var(--text)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--gold-ink);font-weight:600}
+.chip u{font-family:var(--urdu);text-decoration:none;font-size:12px;opacity:.75;margin-right:5px}
+@media(max-width:760px){ .controls{top:66px} .controls-in{flex-wrap:wrap} .search{flex-basis:100%} }
+
+/* ---------- catalogue ---------- */
+.cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:36px 0 18px;flex-wrap:wrap}
+.cat-head h2{font-size:clamp(26px,4vw,40px)}
+.cat-head .hint{font-size:13.5px;color:var(--muted)}
+.count{font-size:14.5px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:16px;padding-bottom:26px}
+.item{
+  position:relative;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+  padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px;cursor:default;
+  transition:transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s, background .3s, border-color .3s;
+  will-change:transform;
+}
+.item::before{
+  content:"";position:absolute;left:18px;right:18px;top:0;height:2px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.3,1);
+}
+.item .sku{position:absolute;top:14px;right:16px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.item .tag{font-size:12.5px;color:var(--gold);font-weight:600}
+.item h3{font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:-.02em;padding-right:52px}
+.item p.sub{margin:0;font-size:14px;color:var(--muted);max-width:36ch}
+.item .foot{margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font-family:var(--display);font-size:20px;font-weight:700}
+.price small{font-family:var(--body);font-weight:400;font-size:12px;color:var(--muted);display:block;letter-spacing:.01em}
+
+/* zoom + mini details */
+.item:hover,.item:focus-within,.item.open{
+  transform:translateY(-6px) scale(1.03);background:var(--panel-hi);
+  border-color:var(--line-hard);box-shadow:var(--glow);z-index:5;
+}
+.item:hover::before,.item:focus-within::before,.item.open::before{transform:scaleX(1)}
+.mini{
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .34s cubic-bezier(.2,.7,.3,1), opacity .26s ease, margin-top .34s;
+}
+.item:hover .mini,.item:focus-within .mini,.item.open .mini{max-height:190px;opacity:1;margin-top:10px}
+.mini dl{margin:0;display:grid;gap:5px;border-top:1px dashed var(--line);padding-top:10px}
+.mini div{display:flex;gap:8px;font-size:13.5px;align-items:baseline}
+.mini dt{color:var(--gold);flex:0 0 auto}
+.mini dd{margin:0;color:var(--muted)}
+.mini .quick{
+  margin-top:10px;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;
+  background:transparent;border:1px solid var(--line-hard);color:var(--text);border-radius:999px;
+  padding:7px 13px;cursor:pointer;font-family:var(--body);transition:background .2s,color .2s;
+}
+.mini .quick:hover{background:var(--gold);border-color:var(--gold);color:var(--gold-ink)}
+@media (hover:none){
+  .item{cursor:pointer}
+  .item:hover{transform:none;box-shadow:none;background:var(--panel);border-color:var(--line)}
+  .item:hover::before{transform:scaleX(0)}
+  .item:hover .mini{max-height:0;opacity:0;margin-top:0}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .item,.item::before,.mini,.wa{transition:none}
+  .item:hover,.item:focus-within,.item.open{transform:none}
+}
+
+.add{
+  border:1px solid var(--gold);background:transparent;color:var(--gold);font-family:var(--body);font-weight:600;
+  font-size:14px;padding:8px 15px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s;white-space:nowrap;
+}
+.add:hover{background:var(--gold);color:var(--gold-ink)}
+.step{display:flex;align-items:center;border:1px solid var(--gold);border-radius:999px;overflow:hidden}
+.step button{width:33px;height:34px;border:0;background:var(--gold);color:var(--gold-ink);font-size:18px;cursor:pointer;line-height:1;font-weight:600}
+.step span{min-width:32px;text-align:center;font-weight:600;font-size:15px}
+.empty{padding:44px 0 60px;color:var(--muted);max-width:46ch}
+.empty b{font-family:var(--display);font-size:23px;color:var(--text);display:block;margin-bottom:6px}
+
+/* ---------- how ---------- */
+.how{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:20px;padding:50px 0}
+.how h2{font-size:clamp(25px,3.6vw,36px);margin-bottom:24px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(218px,1fr));gap:24px;counter-reset:s;margin:0;padding:0}
+.steps li{list-style:none;counter-increment:s;padding-top:14px;border-top:2px solid var(--gold)}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;color:var(--gold);font-size:15px;display:block;margin-bottom:6px}
+.steps h3{font-size:17.5px;margin-bottom:4px}
+.steps p{margin:0;font-size:14.5px;color:var(--muted)}
+
+/* ---------- footer ---------- */
+footer{background:var(--bg2);border-top:1px solid var(--line);padding-top:44px}
+.fmark{
+  font-family:var(--display);font-weight:900;font-size:clamp(46px,13vw,142px);line-height:.86;letter-spacing:-.045em;
+  color:transparent;-webkit-text-stroke:1px var(--line-hard);
+  padding:0 20px;max-width:var(--max);margin:0 auto 28px;
+}
+.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:32px;padding-bottom:36px}
+.fcols h3{font-size:14.5px;font-weight:600;margin-bottom:11px;color:var(--gold);font-family:var(--body);letter-spacing:.03em}
+.fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:14.5px}
+.fcols a{text-decoration:none;color:var(--muted);transition:color .2s}
+.fcols a:hover{color:var(--gold)}
+.fcols p{margin:0 0 8px;font-size:14.5px;color:var(--muted)}
+.fcols .flogo{width:88px;border-radius:6px;border:1px solid var(--line);margin-bottom:12px;display:block}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.ticker div{display:inline-block;padding:12px 0;font-family:var(--display);font-size:15px;animation:slide 38s linear infinite}
+.ticker s{text-decoration:none;color:var(--gold);padding:0 14px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){ .ticker div{animation:none} }
+.legal{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);padding:16px 20px 28px;max-width:var(--max);margin:0 auto}
+
+/* ---------- order bar + slip ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--bg);border-top:1px solid var(--line-hard)}
+.bar-in{display:flex;align-items:center;gap:14px;padding:12px 20px;max-width:var(--max);margin:0 auto}
+.bar .sum b{font-family:var(--display);font-size:20px;display:block;color:var(--gold)}
+.bar .sum span{font-size:13.5px;color:var(--muted)}
+.bar button{margin-left:auto}
+.sheet{position:fixed;inset:0;z-index:60;background:rgba(2,14,9,.72);display:none;align-items:flex-end;justify-content:center}
+.sheet[open-state="1"]{display:flex}
+.sheet-card{
+  background:var(--panel);color:var(--text);width:100%;max-width:580px;max-height:92vh;overflow-y:auto;
+  border-radius:12px 12px 0 0;padding:24px;border:1px solid var(--line-hard);border-bottom:0;
+  animation:up .28s cubic-bezier(.2,.7,.3,1);
+}
+@keyframes up{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion: reduce){ .sheet-card{animation:none} }
+.sheet-card h2{font-size:26px}
+.sheet-card .hint{font-size:14px;color:var(--muted);margin:2px 0 16px}
+.lines{list-style:none;margin:0 0 16px;padding:0;border-top:1px solid var(--line)}
+.lines li{display:flex;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.lines .nm{flex:1;min-width:0}
+.lines .nm b{display:block;font-weight:600}
+.lines .nm span{color:var(--muted);font-size:13px}
+.lines .amt{font-family:var(--display);font-weight:700}
+.rm{border:0;background:transparent;color:var(--chili);cursor:pointer;font-size:13.5px;padding:4px}
+.totals{display:flex;justify-content:space-between;font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:18px}
+.totals span:last-child{color:var(--gold)}
+.field{display:grid;gap:5px;margin-bottom:12px}
+.field label{font-size:13.5px;color:var(--muted)}
+.field input,.field textarea{
+  border:1px solid var(--line);background:var(--bg2);color:var(--text);border-radius:8px;padding:10px 12px;
+  font-family:var(--body);font-size:15px;width:100%;
+}
+.field textarea{min-height:68px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){ .two{grid-template-columns:1fr} }
+.sheet-actions{display:flex;gap:10px;align-items:center;margin-top:6px;flex-wrap:wrap}
+.close{border:1px solid var(--line);background:transparent;color:var(--text);padding:10px 17px;border-radius:999px;cursor:pointer;font-family:var(--body);font-size:14.5px}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+.err{color:var(--chili);font-size:13.5px;margin:10px 0 0;min-height:1.2em}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in wrap">
+    <a class="brand" href="#top">
+      <img id="logoIcon" alt="Kitchen Craft PK">
+      <span class="bt"><b>Kitchen Craft <i>PK</i></b><small>Smart Kitchen, Better Life</small></span>
+    </a>
+    <nav>
+      <a href="#catalogue">Saara samaan</a>
+      <a href="#how">Order kaise karein</a>
+      <a href="#contact">Raabta</a>
+    </nav>
+    <button class="wa" id="waTop" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.5-5.6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3 0-.5l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.7.7-.9 1.6-.6 2.6.4 1.5 1.4 2.9 2.7 3.9 1.3 1 2.8 1.6 4.1 1.6.8 0 1.6-.3 2.1-.9.2-.3.3-.6.3-.9v-.2c0-.1 0-.1-.2-.2z"/></svg>
+      WhatsApp
+    </button>
+    <button class="theme" id="themeBtn" type="button" title="Light ya dark">◑</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>Karahi se <em>dastarkhwan</em> tak</h1>
+          <div class="urdu-line">گھر کے کچن کا ہر ضروری برتن، ایک ہی جگہ</div>
+          <p class="lede">75 items ki poori list, rate ke saath. Item par arrow le jayein to us ki tafseel khul jati hai — pasand aaye to seedha WhatsApp par order bhej dein.</p>
+          <div class="hero-cta">
+            <a class="wa" id="waHero" href="#" role="button">Seedha WhatsApp karein</a>
+            <a class="ghost" href="#catalogue">Poori list dekhein</a>
+          </div>
+        </div>
+        <div class="logo-card"><img id="logoFull" alt="Kitchen Craft PK logo"></div>
+      </div>
+      <div class="facts">
+        <div class="fact"><b id="factCount">75</b><span>items stock list mein</span></div>
+        <div class="fact"><b>COD</b><span>Lahore mein cash on delivery</span></div>
+        <div class="fact"><b>1–2 din</b><span>delivery, poore Pakistan</span></div>
+        <div class="fact"><b id="factPhone">0301 9088013</b><span>call ya WhatsApp, 10 AM – 10 PM</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="controls" id="catalogue">
+    <div class="controls-in">
+      <div class="search">
+        <label class="sr" for="q">Samaan dhoondein</label>
+        <input id="q" type="search" placeholder="Karahi, chimta, hot pot…" autocomplete="off">
+      </div>
+      <div class="rail" id="rail"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="cat-head">
+      <div>
+        <h2 id="catTitle">Saara samaan</h2>
+        <p class="hint">Item par mouse le jayein (mobile par tap karein) to tafseel aur direct order button khulta hai.</p>
+      </div>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <b>Is naam ka koi item nahi mila</b>
+      Naam thora chhota kar ke likhein, ya category chip se browse karein. Jo cheez list mein nahi, woh bhi hum manga sakte hain — WhatsApp par pooch lein.
+    </div>
+  </div>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <h2>Order kaise karein</h2>
+      <ol class="steps">
+        <li><h3>Item chunein</h3><p>List mein se quantity barha dein. Aap ka intekhab isi browser mein save rehta hai.</p></li>
+        <li><h3>Ya seedha order karein</h3><p>Kisi bhi item ki tafseel mein "Isi ka order karein" dabayein — bas wahi item WhatsApp par chala jayega.</p></li>
+        <li><h3>Slip bharein</h3><p>Naam, phone aur pata likhein. Button dabane par poora message WhatsApp mein khul jata hai.</p></li>
+        <li><h3>Confirmation call</h3><p>Hum thori dair mein call kar ke stock aur delivery confirm karte hain, phir samaan bhejte hain.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="fmark">Kitchen Craft PK</div>
+  <div class="wrap fcols">
+    <div>
+      <img class="flogo" id="logoFoot" alt="">
+      <p>Smart Kitchen, Better Life.</p>
+    </div>
+    <div>
+      <h3>Categories</h3>
+      <ul id="fcats"></ul>
+    </div>
+    <div>
+      <h3>Madad</h3>
+      <ul>
+        <li><a href="#how">Order kaise karein</a></li>
+        <li><a href="#" id="waFooter">Rate ya stock poochein</a></li>
+        <li><a href="#catalogue">Delivery aur wapsi</a></li>
+        <li><a href="#catalogue">Thok rate</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Raabta</h3>
+      <p id="footPhone">0301 9088013</p>
+      <p>Shop 12, Main Bazaar, Lahore</p>
+      <p>Roz 10 AM – 10 PM</p>
+    </div>
+  </div>
+  <div class="ticker"><div id="tick"></div></div>
+  <div class="legal">
+    <span>© <span id="yr"></span> Kitchen Craft PK</span>
+    <span>Rate badal sakte hain — order se pehle confirm kar lein</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <div class="bar-in">
+    <div class="sum"><b id="barTotal">Rs 0</b><span id="barCount">Order slip khaali hai</span></div>
+    <button class="wa" id="openSheet" type="button">Order slip kholein</button>
+  </div>
+</div>
+
+<div class="sheet" id="sheet" open-state="0" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet-card">
+    <h2 id="sheetTitle">Order slip</h2>
+    <p class="hint">Yeh slip WhatsApp message ban jayegi. Payment order confirm hone ke baad.</p>
+    <ul class="lines" id="lines"></ul>
+    <div class="totals"><span>Total</span><span id="sheetTotal">Rs 0</span></div>
+    <div class="two">
+      <div class="field"><label for="cName">Naam</label><input id="cName" autocomplete="name"></div>
+      <div class="field"><label for="cPhone">Phone number</label><input id="cPhone" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx"></div>
+    </div>
+    <div class="field"><label for="cCity">Sheher</label><input id="cCity" autocomplete="address-level2" placeholder="Lahore"></div>
+    <div class="field"><label for="cAddr">Pura pata</label><textarea id="cAddr" autocomplete="street-address"></textarea></div>
+    <div class="field"><label for="cNote">Koi baat batani hai? (optional)</label><textarea id="cNote"></textarea></div>
+    <p class="err" id="err"></p>
+    <div class="sheet-actions">
+      <button class="wa" id="sendWa" type="button">WhatsApp par bhejein</button>
+      <button class="close" id="closeSheet" type="button">Wapas list par</button>
+    </div>
+    <p class="note">Message bhejne se pehle WhatsApp aap ko poori list dikha dega, wahan edit bhi kar sakte hain.</p>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   1. STORE CONFIG
+   ============================================================ */
+const STORE = {
+  name: "Kitchen Craft PK",
+  whatsapp: "923019088013",      // 0301 9088013
+  phoneDisplay: "0301 9088013",
+  currency: "Rs"
+};
+
+/* Supabase (optional). Khaali chhor dein to site local list se chalti hai. */
+const SUPABASE = {
+  url: "",        // e.g. "https://xxxx.supabase.co"
+  anonKey: ""     // anon public key
+};
+
+/* Logo (base64, isi file mein embedded hai) */
+const LOGO = { icon: "data:image/webp;base64,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", full: "data:image/webp;base64,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" };
+
+/* ============================================================
+   2. PRODUCTS — 75 items
+   ============================================================ */
+const CATEGORIES = [
+  {
+    "id": "cookware",
+    "label": "Cookware",
+    "urdu": "برتن"
+  },
+  {
+    "id": "tools",
+    "label": "Kitchen tools",
+    "urdu": "لوازمات"
+  },
+  {
+    "id": "cutlery",
+    "label": "Knives & boards",
+    "urdu": "چھری"
+  },
+  {
+    "id": "storage",
+    "label": "Storage",
+    "urdu": "ڈبے"
+  },
+  {
+    "id": "serving",
+    "label": "Serving & dining",
+    "urdu": "دسترخوان"
+  },
+  {
+    "id": "bake",
+    "label": "Baking",
+    "urdu": "بیکنگ"
+  },
+  {
+    "id": "appliance",
+    "label": "Small appliances",
+    "urdu": "برقی"
+  },
+  {
+    "id": "clean",
+    "label": "Cleaning",
+    "urdu": "صفائی"
+  }
+];
+
+const LOCAL_PRODUCTS = [
+  {
+    "sku": "CW-01",
+    "name": "Non-Stick Karahi 30cm",
+    "sub": "Three-layer marble coating, works on gas and induction",
+    "cat": "cookware",
+    "price": 4200,
+    "specs": [
+      "Marble non-stick",
+      "30cm, dhakkan alag"
+    ]
+  },
+  {
+    "sku": "CW-02",
+    "name": "Non-Stick Karahi 26cm",
+    "sub": "Everyday size with a wooden grip handle",
+    "cat": "cookware",
+    "price": 3400,
+    "specs": [
+      "Marble non-stick",
+      "26cm, wooden handle"
+    ]
+  },
+  {
+    "sku": "CW-03",
+    "name": "Steel Degchi 5 Litre",
+    "sub": "Heavy gauge body with a fitted steel lid",
+    "cat": "cookware",
+    "price": 5600,
+    "specs": [
+      "Stainless steel",
+      "5 litre, lid included"
+    ]
+  },
+  {
+    "sku": "CW-04",
+    "name": "Aluminium Pateeli 7 Litre",
+    "sub": "Deep pot sized for biryani and daal",
+    "cat": "cookware",
+    "price": 3900,
+    "specs": [
+      "Heavy aluminium",
+      "7 litre, do handle"
+    ]
+  },
+  {
+    "sku": "CW-05",
+    "name": "Pressure Cooker 5 Litre",
+    "sub": "Safety valve with a locking lid",
+    "cat": "cookware",
+    "price": 7800,
+    "specs": [
+      "Aluminium body",
+      "5 litre, safety valve"
+    ]
+  },
+  {
+    "sku": "CW-06",
+    "name": "Roti Tawa 30cm",
+    "sub": "Thick base that spreads heat evenly",
+    "cat": "cookware",
+    "price": 1900,
+    "specs": [
+      "Iron, thick base",
+      "30cm, roti ke liye"
+    ]
+  },
+  {
+    "sku": "CW-07",
+    "name": "Cast Iron Tawa 26cm",
+    "sub": "Pre-seasoned and holds heat for a long time",
+    "cat": "cookware",
+    "price": 3200,
+    "specs": [
+      "Cast iron",
+      "26cm, pre-seasoned"
+    ]
+  },
+  {
+    "sku": "CW-08",
+    "name": "Non-Stick Fry Pan 24cm",
+    "sub": "Low sides and one handle, easy for anda",
+    "cat": "cookware",
+    "price": 2600,
+    "specs": [
+      "Non-stick coating",
+      "24cm, single handle"
+    ]
+  },
+  {
+    "sku": "CW-09",
+    "name": "Steel Wok 32cm with Lid",
+    "sub": "Double handle and a tempered glass lid",
+    "cat": "cookware",
+    "price": 8300,
+    "specs": [
+      "Stainless steel",
+      "32cm, glass lid"
+    ]
+  },
+  {
+    "sku": "CW-10",
+    "name": "Milk Pan 1.5 Litre",
+    "sub": "Pouring lip and a rim that stops boil-over",
+    "cat": "cookware",
+    "price": 1450,
+    "specs": [
+      "Non-stick",
+      "1.5 litre, pouring lip"
+    ]
+  },
+  {
+    "sku": "CW-11",
+    "name": "Three-Tier Steamer Pot",
+    "sub": "Stacked trays for kebab, momos and vegetables",
+    "cat": "cookware",
+    "price": 6100,
+    "specs": [
+      "Steel, 3 tier",
+      "24cm, steam trays"
+    ]
+  },
+  {
+    "sku": "CW-12",
+    "name": "Grill Pan 28cm",
+    "sub": "Ridged base that leaves bar-b-q marks",
+    "cat": "cookware",
+    "price": 4700,
+    "specs": [
+      "Non-stick ridged",
+      "28cm, grill marks"
+    ]
+  },
+  {
+    "sku": "KT-01",
+    "name": "Steel Chimta 12 inch",
+    "sub": "Flat tongs for roti straight off the tawa",
+    "cat": "tools",
+    "price": 450,
+    "specs": [
+      "Stainless steel",
+      "12 inch, flat jaw"
+    ]
+  },
+  {
+    "sku": "KT-02",
+    "name": "Slotted Palta",
+    "sub": "Turner shaped for anda and paratha",
+    "cat": "tools",
+    "price": 520,
+    "specs": [
+      "Steel, slotted",
+      "Wooden grip handle"
+    ]
+  },
+  {
+    "sku": "KT-03",
+    "name": "Serving Ladle",
+    "sub": "Deep bowl that pours daal and salan cleanly",
+    "cat": "tools",
+    "price": 620,
+    "specs": [
+      "Stainless steel",
+      "8oz deep bowl"
+    ]
+  },
+  {
+    "sku": "KT-04",
+    "name": "Skimmer Spoon",
+    "sub": "Lifts pakoras out of hot oil and drains them",
+    "cat": "tools",
+    "price": 560,
+    "specs": [
+      "Steel mesh",
+      "Oil drain design"
+    ]
+  },
+  {
+    "sku": "KT-05",
+    "name": "Balloon Whisk",
+    "sub": "Stainless wire for eggs and cream",
+    "cat": "tools",
+    "price": 690,
+    "specs": [
+      "Steel wire",
+      "10 inch balloon"
+    ]
+  },
+  {
+    "sku": "KT-06",
+    "name": "Vegetable Peeler",
+    "sub": "Swivel blade with a soft grip handle",
+    "cat": "tools",
+    "price": 380,
+    "specs": [
+      "Steel blade",
+      "Swivel, soft grip"
+    ]
+  },
+  {
+    "sku": "KT-07",
+    "name": "Four-Side Grater",
+    "sub": "Cheese, carrot, adrak and lemon zest on one tool",
+    "cat": "tools",
+    "price": 980,
+    "specs": [
+      "Steel, 4 sides",
+      "Non-slip base"
+    ]
+  },
+  {
+    "sku": "KT-08",
+    "name": "Potato Masher",
+    "sub": "Wide steel plate for aloo bhurta",
+    "cat": "tools",
+    "price": 640,
+    "specs": [
+      "Steel plate",
+      "Wide head masher"
+    ]
+  },
+  {
+    "sku": "KT-09",
+    "name": "Wooden Belan",
+    "sub": "Smooth roller that does not stick to atta",
+    "cat": "tools",
+    "price": 450,
+    "specs": [
+      "Seasoned wood",
+      "9 inch roller"
+    ]
+  },
+  {
+    "sku": "KT-10",
+    "name": "Marble Chakla 10 inch",
+    "sub": "Cool surface, keeps dough from sticking",
+    "cat": "tools",
+    "price": 2200,
+    "specs": [
+      "Marble slab",
+      "10 inch, wooden stand"
+    ]
+  },
+  {
+    "sku": "KT-11",
+    "name": "Garlic Press",
+    "sub": "Crushes lehsan with the skin still on",
+    "cat": "tools",
+    "price": 890,
+    "specs": [
+      "Zinc alloy",
+      "Dishwasher safe"
+    ]
+  },
+  {
+    "sku": "KT-12",
+    "name": "Kitchen Scissors",
+    "sub": "Cuts through chicken joints and packaging",
+    "cat": "tools",
+    "price": 750,
+    "specs": [
+      "Steel blades",
+      "Soft grip handle"
+    ]
+  },
+  {
+    "sku": "KT-13",
+    "name": "Measuring Spoon Set",
+    "sub": "Five sizes held together on one ring",
+    "cat": "tools",
+    "price": 420,
+    "specs": [
+      "Stainless steel",
+      "5 sizes, one ring"
+    ]
+  },
+  {
+    "sku": "KT-14",
+    "name": "Measuring Cup Set",
+    "sub": "Four nesting cups marked in cups and ml",
+    "cat": "tools",
+    "price": 560,
+    "specs": [
+      "Stainless steel",
+      "4 nesting cups"
+    ]
+  },
+  {
+    "sku": "KT-15",
+    "name": "Steel Channi 22cm",
+    "sub": "Fine mesh for chai, atta and rice",
+    "cat": "tools",
+    "price": 680,
+    "specs": [
+      "Steel fine mesh",
+      "22cm, hook handle"
+    ]
+  },
+  {
+    "sku": "KN-01",
+    "name": "Chef Knife 8 inch",
+    "sub": "Forged blade balanced for daily prep",
+    "cat": "cutlery",
+    "price": 2400,
+    "specs": [
+      "Forged steel",
+      "8 inch blade"
+    ]
+  },
+  {
+    "sku": "KN-02",
+    "name": "Paring Knife 3.5 inch",
+    "sub": "Short blade for peeling and trimming",
+    "cat": "cutlery",
+    "price": 750,
+    "specs": [
+      "Stainless steel",
+      "3.5 inch blade"
+    ]
+  },
+  {
+    "sku": "KN-03",
+    "name": "Bread Knife 8 inch",
+    "sub": "Serrated edge that slices without tearing",
+    "cat": "cutlery",
+    "price": 1650,
+    "specs": [
+      "Serrated steel",
+      "8 inch blade"
+    ]
+  },
+  {
+    "sku": "KN-04",
+    "name": "Knife Set of Five",
+    "sub": "Comes with a magnetic wooden block",
+    "cat": "cutlery",
+    "price": 6900,
+    "specs": [
+      "Steel, 5 knives",
+      "Magnetic wood block"
+    ]
+  },
+  {
+    "sku": "KN-05",
+    "name": "Meat Cleaver",
+    "sub": "Heavy blade for bone-in cuts",
+    "cat": "cutlery",
+    "price": 2900,
+    "specs": [
+      "Heavy carbon steel",
+      "Bone-in cutting"
+    ]
+  },
+  {
+    "sku": "KN-06",
+    "name": "Bamboo Cutting Board",
+    "sub": "Juice groove on both faces",
+    "cat": "cutlery",
+    "price": 1800,
+    "specs": [
+      "Bamboo",
+      "Juice groove, 2 sides"
+    ]
+  },
+  {
+    "sku": "KN-07",
+    "name": "Chopping Board Set of Three",
+    "sub": "Colour coded so meat and sabzi stay apart",
+    "cat": "cutlery",
+    "price": 1350,
+    "specs": [
+      "Food-grade plastic",
+      "3 boards, colour coded"
+    ]
+  },
+  {
+    "sku": "KN-08",
+    "name": "Knife Sharpener",
+    "sub": "Two stages, carbide then ceramic",
+    "cat": "cutlery",
+    "price": 890,
+    "specs": [
+      "Carbide + ceramic",
+      "Non-slip base"
+    ]
+  },
+  {
+    "sku": "KN-09",
+    "name": "Manual Vegetable Chopper",
+    "sub": "Pull cord chops pyaz in a few seconds",
+    "cat": "cutlery",
+    "price": 1950,
+    "specs": [
+      "Plastic + steel",
+      "900ml bowl, pull cord"
+    ]
+  },
+  {
+    "sku": "ST-01",
+    "name": "Air-Tight Jar Set of Six",
+    "sub": "Clear jars with clip lids and rubber seals",
+    "cat": "storage",
+    "price": 3200,
+    "specs": [
+      "Clear plastic",
+      "6 jars, clip lids"
+    ]
+  },
+  {
+    "sku": "ST-02",
+    "name": "Masala Rack of Twelve",
+    "sub": "Rotating stand with small steel spoons",
+    "cat": "storage",
+    "price": 2800,
+    "specs": [
+      "Steel + acrylic",
+      "12 jars, rotating"
+    ]
+  },
+  {
+    "sku": "ST-03",
+    "name": "Atta Container 10kg",
+    "sub": "Wide mouth with a scoop inside",
+    "cat": "storage",
+    "price": 2100,
+    "specs": [
+      "Food-grade plastic",
+      "10kg, scoop included"
+    ]
+  },
+  {
+    "sku": "ST-04",
+    "name": "Steel Lunch Box, Three Tier",
+    "sub": "Insulated body with a carry bag",
+    "cat": "storage",
+    "price": 2450,
+    "specs": [
+      "Steel, insulated",
+      "3 tier, carry bag"
+    ]
+  },
+  {
+    "sku": "ST-05",
+    "name": "Steel Water Bottle 1 Litre",
+    "sub": "Stays cold for about eight hours",
+    "cat": "storage",
+    "price": 1600,
+    "specs": [
+      "Steel, vacuum",
+      "1 litre, leak proof"
+    ]
+  },
+  {
+    "sku": "ST-06",
+    "name": "Hot Pot 3 Litre",
+    "sub": "Keeps salan warm through dinner",
+    "cat": "storage",
+    "price": 2900,
+    "specs": [
+      "Steel + PU foam",
+      "3 litre, roti case"
+    ]
+  },
+  {
+    "sku": "ST-07",
+    "name": "Roti Hot Case 25cm",
+    "sub": "Holds a dozen rotis and keeps them soft",
+    "cat": "storage",
+    "price": 1750,
+    "specs": [
+      "Steel inner",
+      "25cm, keeps soft"
+    ]
+  },
+  {
+    "sku": "ST-08",
+    "name": "Fridge Bottle Set of Four",
+    "sub": "One litre each, fits the fridge door",
+    "cat": "storage",
+    "price": 1250,
+    "specs": [
+      "BPA-free plastic",
+      "4 bottles, 1 litre"
+    ]
+  },
+  {
+    "sku": "ST-09",
+    "name": "Cling Film Cutter Box",
+    "sub": "Slide cutter so the film never tangles",
+    "cat": "storage",
+    "price": 690,
+    "specs": [
+      "Plastic box",
+      "Slide cutter, 30m"
+    ]
+  },
+  {
+    "sku": "ST-10",
+    "name": "Bread Bin with Lid",
+    "sub": "Keeps bread and rusk fresh on the counter",
+    "cat": "storage",
+    "price": 1900,
+    "specs": [
+      "Steel with lid",
+      "Bread aur rusk"
+    ]
+  },
+  {
+    "sku": "SV-01",
+    "name": "Dinner Set of 32 Pieces",
+    "sub": "Service for six in chip-resistant porcelain",
+    "cat": "serving",
+    "price": 11500,
+    "specs": [
+      "Porcelain",
+      "32 pieces, 6 log"
+    ]
+  },
+  {
+    "sku": "SV-02",
+    "name": "Tea Set of Twelve",
+    "sub": "Six cups with matching saucers",
+    "cat": "serving",
+    "price": 4200,
+    "specs": [
+      "Porcelain",
+      "12 pieces, gold rim"
+    ]
+  },
+  {
+    "sku": "SV-03",
+    "name": "Melamine Bowl Set of Six",
+    "sub": "Sized for salan, raita and salad",
+    "cat": "serving",
+    "price": 1800,
+    "specs": [
+      "Melamine",
+      "6 bowls, medium"
+    ]
+  },
+  {
+    "sku": "SV-04",
+    "name": "Glass Set of Six",
+    "sub": "Straight sided, 300ml each",
+    "cat": "serving",
+    "price": 1400,
+    "specs": [
+      "Tempered glass",
+      "6 glass, 300ml"
+    ]
+  },
+  {
+    "sku": "SV-05",
+    "name": "Serving Tray 16 inch",
+    "sub": "Steel rim with a non-slip base",
+    "cat": "serving",
+    "price": 1650,
+    "specs": [
+      "Steel rim tray",
+      "16 inch, anti-slip"
+    ]
+  },
+  {
+    "sku": "SV-06",
+    "name": "Water Jug 2 Litre",
+    "sub": "Lid strains pulp when you pour",
+    "cat": "serving",
+    "price": 1350,
+    "specs": [
+      "Acrylic",
+      "2 litre, filter lid"
+    ]
+  },
+  {
+    "sku": "SV-07",
+    "name": "Thermos Flask 1 Litre",
+    "sub": "Chai stays hot from asr to maghrib",
+    "cat": "serving",
+    "price": 2600,
+    "specs": [
+      "Steel, vacuum",
+      "1 litre, 12 ghante"
+    ]
+  },
+  {
+    "sku": "SV-08",
+    "name": "Cutlery Set of 24 Pieces",
+    "sub": "Spoons, forks and knives for six people",
+    "cat": "serving",
+    "price": 3400,
+    "specs": [
+      "Stainless steel",
+      "24 pieces, 6 log"
+    ]
+  },
+  {
+    "sku": "SV-09",
+    "name": "Roti Basket with Cloth",
+    "sub": "Cane weave that holds a full stack",
+    "cat": "serving",
+    "price": 950,
+    "specs": [
+      "Cane weave",
+      "With cotton cloth"
+    ]
+  },
+  {
+    "sku": "BK-01",
+    "name": "Baking Tray 12 inch",
+    "sub": "Non-stick sheet for biscuits and cake",
+    "cat": "bake",
+    "price": 1450,
+    "specs": [
+      "Non-stick steel",
+      "12 inch tray"
+    ]
+  },
+  {
+    "sku": "BK-02",
+    "name": "Round Cake Mould 9 inch",
+    "sub": "Loose base lifts the cake out whole",
+    "cat": "bake",
+    "price": 1250,
+    "specs": [
+      "Non-stick steel",
+      "9 inch, loose base"
+    ]
+  },
+  {
+    "sku": "BK-03",
+    "name": "Muffin Tray of Twelve",
+    "sub": "Works for cupcakes and kebab bites",
+    "cat": "bake",
+    "price": 1550,
+    "specs": [
+      "Non-stick steel",
+      "12 cups"
+    ]
+  },
+  {
+    "sku": "BK-04",
+    "name": "Silicone Spatula Set of Three",
+    "sub": "Heat safe up to 240 degrees",
+    "cat": "bake",
+    "price": 1100,
+    "specs": [
+      "Silicone + steel",
+      "3 pieces, 240C"
+    ]
+  },
+  {
+    "sku": "BK-05",
+    "name": "Pastry Brush",
+    "sub": "Silicone bristles for a ghee wash",
+    "cat": "bake",
+    "price": 480,
+    "specs": [
+      "Silicone bristles",
+      "Heat safe handle"
+    ]
+  },
+  {
+    "sku": "BK-06",
+    "name": "Piping Bag and Nozzle Set",
+    "sub": "Twelve tips for icing and cream",
+    "cat": "bake",
+    "price": 1600,
+    "specs": [
+      "Nylon bag + steel",
+      "12 nozzles"
+    ]
+  },
+  {
+    "sku": "BK-07",
+    "name": "Cooling Rack 40cm",
+    "sub": "Raised grid keeps the base from going soft",
+    "cat": "bake",
+    "price": 950,
+    "specs": [
+      "Chrome steel",
+      "40cm grid"
+    ]
+  },
+  {
+    "sku": "AP-01",
+    "name": "Hand Blender 700W",
+    "sub": "Blends soup straight in the pot",
+    "cat": "appliance",
+    "price": 5400,
+    "specs": [
+      "700W motor",
+      "Steel blending rod"
+    ]
+  },
+  {
+    "sku": "AP-02",
+    "name": "Electric Kettle 1.8 Litre",
+    "sub": "Steel body with auto cut-off",
+    "cat": "appliance",
+    "price": 3900,
+    "specs": [
+      "Steel body",
+      "1.8 litre, auto cut-off"
+    ]
+  },
+  {
+    "sku": "AP-03",
+    "name": "Electric Chopper 400W",
+    "sub": "Pyaz, lehsan and mince in one jar",
+    "cat": "appliance",
+    "price": 4600,
+    "specs": [
+      "400W motor",
+      "1.2L jar, steel blades"
+    ]
+  },
+  {
+    "sku": "AP-04",
+    "name": "Sandwich Maker",
+    "sub": "Non-stick plates with a ready light",
+    "cat": "appliance",
+    "price": 5200,
+    "specs": [
+      "Non-stick plates",
+      "750W, ready light"
+    ]
+  },
+  {
+    "sku": "AP-05",
+    "name": "Egg Boiler, Seven Eggs",
+    "sub": "Three settings with a buzzer",
+    "cat": "appliance",
+    "price": 3300,
+    "specs": [
+      "7 egg capacity",
+      "3 settings, buzzer"
+    ]
+  },
+  {
+    "sku": "AP-06",
+    "name": "Hand Mixer 300W",
+    "sub": "Five speeds with dough hooks included",
+    "cat": "appliance",
+    "price": 4800,
+    "specs": [
+      "300W motor",
+      "5 speed, dough hooks"
+    ]
+  },
+  {
+    "sku": "AP-07",
+    "name": "Citrus Juicer 40W",
+    "sub": "Sized for malta and mausambi",
+    "cat": "appliance",
+    "price": 3600,
+    "specs": [
+      "40W motor",
+      "Pulp filter included"
+    ]
+  },
+  {
+    "sku": "CL-01",
+    "name": "Two-Tier Dish Rack",
+    "sub": "Drip tray underneath and a cutlery holder",
+    "cat": "clean",
+    "price": 4200,
+    "specs": [
+      "Steel, 2 tier",
+      "Drip tray included"
+    ]
+  },
+  {
+    "sku": "CL-02",
+    "name": "Sink Strainer Basket",
+    "sub": "Catches scraps before they block the pipe",
+    "cat": "clean",
+    "price": 520,
+    "specs": [
+      "Steel basket",
+      "Standard sink size"
+    ]
+  },
+  {
+    "sku": "CL-03",
+    "name": "Scrub Pad Pack of Six",
+    "sub": "Rough side for degchi, soft side for non-stick",
+    "cat": "clean",
+    "price": 340,
+    "specs": [
+      "Foam + fibre",
+      "6 pads, dono side"
+    ]
+  },
+  {
+    "sku": "CL-04",
+    "name": "Apron with Front Pocket",
+    "sub": "Cotton canvas with adjustable neck strap",
+    "cat": "clean",
+    "price": 1150,
+    "specs": [
+      "Cotton canvas",
+      "Front pocket, adjustable"
+    ]
+  },
+  {
+    "sku": "CL-05",
+    "name": "Oven Gloves, Pair",
+    "sub": "Quilted cotton, safe for hot trays",
+    "cat": "clean",
+    "price": 890,
+    "specs": [
+      "Quilted cotton",
+      "Pair, heat safe"
+    ]
+  },
+  {
+    "sku": "CL-06",
+    "name": "Steel Gas Lighter",
+    "sub": "Refillable with a long nozzle",
+    "cat": "clean",
+    "price": 420,
+    "specs": [
+      "Steel body",
+      "Refillable, long nozzle"
+    ]
+  }
+];
+
+/* ============================================================
+   3. APP
+   ============================================================ */
+const money = n => STORE.currency + " " + n.toLocaleString("en-PK");
+const catLabel = id => (CATEGORIES.find(c => c.id === id) || {}).label || id;
+
+let PRODUCTS = LOCAL_PRODUCTS.slice();
+let cart = {};
+let filter = "all";
+let query = "";
+
+document.getElementById("logoIcon").src = LOGO.icon;
+document.getElementById("logoFull").src = LOGO.full;
+document.getElementById("logoFoot").src = LOGO.icon;
+
+try { cart = JSON.parse(localStorage.getItem("kcpk-cart") || "{}") || {}; } catch (e) { cart = {}; }
+function saveCart(){ try { localStorage.setItem("kcpk-cart", JSON.stringify(cart)); } catch (e) {} }
+
+/* ---- theme ---- */
+try {
+  const t = localStorage.getItem("kcpk-theme");
+  if (t) document.documentElement.setAttribute("data-theme", t);
+} catch (e) {}
+document.getElementById("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "light" ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", next);
+  try { localStorage.setItem("kcpk-theme", next); } catch (e) {}
+});
+
+/* ---- chrome ---- */
+function renderChrome(){
+  const rail = document.getElementById("rail");
+  rail.innerHTML = "";
+  [{ id:"all", label:"Sab", urdu:"سب" }].concat(CATEGORIES).forEach(c => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button";
+    b.setAttribute("aria-pressed", String(c.id === filter));
+    b.innerHTML = c.label + (c.urdu ? ' <u>' + c.urdu + '</u>' : "");
+    b.addEventListener("click", () => { filter = c.id; renderChrome(); renderGrid(); });
+    rail.appendChild(b);
+  });
+  const fc = document.getElementById("fcats");
+  fc.innerHTML = CATEGORIES.map(c => '<li><a href="#catalogue" data-cat="' + c.id + '">' + c.label + '</a></li>').join("");
+  fc.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    filter = a.dataset.cat; query = ""; document.getElementById("q").value = "";
+    renderChrome(); renderGrid();
+  }));
+  const names = CATEGORIES.map(c => c.label).join(" <s>◆</s> ") + " <s>◆</s> ";
+  document.getElementById("tick").innerHTML = names + names;
+}
+
+/* ---- grid ---- */
+function visible(){
+  const q = query.trim().toLowerCase();
+  return PRODUCTS.filter(p => {
+    if (filter !== "all" && p.cat !== filter) return false;
+    if (!q) return true;
+    return (p.name + " " + p.sub + " " + p.sku + " " + (p.specs || []).join(" ") + " " + catLabel(p.cat)).toLowerCase().includes(q);
+  });
+}
+function renderGrid(){
+  const grid = document.getElementById("grid");
+  const list = visible();
+  document.getElementById("catTitle").textContent = filter === "all" ? "Saara samaan" : catLabel(filter);
+  document.getElementById("count").textContent = list.length + " items" + (query ? ' "' + query + '" ke liye' : "");
+  document.getElementById("empty").hidden = list.length > 0;
+  grid.innerHTML = "";
+  list.forEach(p => {
+    const specs = p.specs || [];
+    const el = document.createElement("article");
+    el.className = "item";
+    el.tabIndex = 0;
+    el.innerHTML =
+      '<span class="sku">' + p.sku + '</span>' +
+      '<span class="tag">' + catLabel(p.cat) + '</span>' +
+      '<h3>' + p.name + '</h3>' +
+      '<p class="sub">' + p.sub + '</p>' +
+      '<div class="mini"><dl>' +
+        (specs[0] ? '<div><dt>Material</dt><dd>' + specs[0] + '</dd></div>' : "") +
+        (specs[1] ? '<div><dt>Tafseel</dt><dd>' + specs[1] + '</dd></div>' : "") +
+        '<div><dt>Delivery</dt><dd>1–2 din, COD available</dd></div>' +
+        '<div><dt>Code</dt><dd>' + p.sku + '</dd></div>' +
+      '</dl></div>' +
+      '<div class="foot"><span class="price">' + money(p.price) + '<small>rate per piece</small></span>' +
+      '<span class="ctrl"></span></div>';
+    const quick = document.createElement("button");
+    quick.className = "quick"; quick.type = "button"; quick.textContent = "Isi ka order karein";
+    quick.addEventListener("click", e => { e.stopPropagation(); directOrder(p); });
+    el.querySelector(".mini").appendChild(quick);
+    el.querySelector(".ctrl").appendChild(control(p));
+    el.addEventListener("click", e => {
+      if (e.target.closest("button")) return;
+      document.querySelectorAll(".item.open").forEach(o => { if (o !== el) o.classList.remove("open"); });
+      el.classList.toggle("open");
+    });
+    grid.appendChild(el);
+  });
+}
+function control(p){
+  const n = cart[p.sku] || 0;
+  if (!n){
+    const b = document.createElement("button");
+    b.className = "add"; b.type = "button"; b.textContent = "Slip mein daalein";
+    b.setAttribute("aria-label", p.name + " order slip mein daalein");
+    b.addEventListener("click", e => { e.stopPropagation(); cart[p.sku] = 1; afterCart(); });
+    return b;
+  }
+  const box = document.createElement("span");
+  box.className = "step";
+  const minus = document.createElement("button");
+  minus.type = "button"; minus.textContent = "−"; minus.setAttribute("aria-label", "Kam karein");
+  minus.addEventListener("click", e => { e.stopPropagation(); cart[p.sku]--; if (cart[p.sku] < 1) delete cart[p.sku]; afterCart(); });
+  const val = document.createElement("span"); val.textContent = n;
+  const plus = document.createElement("button");
+  plus.type = "button"; plus.textContent = "+"; plus.setAttribute("aria-label", "Ziada karein");
+  plus.addEventListener("click", e => { e.stopPropagation(); cart[p.sku] = n + 1; afterCart(); });
+  box.append(minus, val, plus);
+  return box;
+}
+function afterCart(){ saveCart(); renderGrid(); renderSlip(); }
+
+/* ---- slip ---- */
+function cartLines(){
+  return Object.keys(cart).map(sku => {
+    const p = PRODUCTS.find(x => x.sku === sku);
+    return p ? { p: p, qty: cart[sku], amount: p.price * cart[sku] } : null;
+  }).filter(Boolean);
+}
+function cartTotal(){ return cartLines().reduce((s, l) => s + l.amount, 0); }
+function renderSlip(){
+  const lines = cartLines(), total = cartTotal();
+  const items = lines.reduce((s, l) => s + l.qty, 0);
+  document.getElementById("barTotal").textContent = money(total);
+  document.getElementById("barCount").textContent = items
+    ? items + " item" + (items > 1 ? "s" : "") + " slip mein"
+    : "Order slip khaali hai";
+  document.getElementById("sheetTotal").textContent = money(total);
+  const ul = document.getElementById("lines");
+  if (!lines.length){
+    ul.innerHTML = '<li><span class="nm">Slip khaali hai. List mein se koi item daalein, phir yahan wapis aayein.</span></li>';
+    return;
+  }
+  ul.innerHTML = "";
+  lines.forEach(l => {
+    const li = document.createElement("li");
+    li.innerHTML =
+      '<span class="nm"><b>' + l.p.name + '</b><span>' + l.qty + ' × ' + money(l.p.price) + '</span></span>' +
+      '<span class="amt">' + money(l.amount) + '</span>';
+    const rm = document.createElement("button");
+    rm.className = "rm"; rm.type = "button"; rm.textContent = "hatayein";
+    rm.addEventListener("click", () => { delete cart[l.p.sku]; afterCart(); });
+    li.appendChild(rm);
+    ul.appendChild(li);
+  });
+}
+
+/* ---- sheet ---- */
+const sheet = document.getElementById("sheet");
+document.getElementById("openSheet").addEventListener("click", () => {
+  sheet.setAttribute("open-state", "1"); document.getElementById("cName").focus();
+});
+document.getElementById("closeSheet").addEventListener("click", () => sheet.setAttribute("open-state", "0"));
+sheet.addEventListener("click", e => { if (e.target === sheet) sheet.setAttribute("open-state", "0"); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") sheet.setAttribute("open-state", "0"); });
+
+/* ---- WhatsApp ---- */
+const waLink = text => "https://wa.me/" + STORE.whatsapp + "?text=" + encodeURIComponent(text);
+function openWa(text){
+  const w = window.open(waLink(text), "_blank");
+  if (!w) location.href = waLink(text);
+  return w;
+}
+function generalMessage(){
+  return "Assalam o Alaikum " + STORE.name + ",\n\nMujhe kitchen ka samaan chahiye. Rate aur stock bata dein.";
+}
+function directOrder(p){
+  const t = "Assalam o Alaikum " + STORE.name + ",\n\nMujhe yeh item chahiye:\n\n" +
+            p.name + " (" + p.sku + ")\nRate: " + money(p.price) + "\n\n" +
+            "Stock aur delivery bata dein. Pata bhi bhej deta/deti hoon.";
+  openWa(t);
+  saveOrder({ name:"", phone:"", city:"", addr:"", note:"Quick order website se" },
+            t, [{ sku:p.sku, name:p.name, qty:1, price:p.price }], p.price);
+}
+function orderMessage(c){
+  let t = "Assalam o Alaikum " + STORE.name + " — naya order\n\n";
+  cartLines().forEach((l, i) => {
+    t += (i + 1) + ". " + l.p.name + " (" + l.p.sku + ")  ×" + l.qty + "  —  " + money(l.amount) + "\n";
+  });
+  t += "\nTotal: " + money(cartTotal()) + "\n\n";
+  t += "Naam: " + c.name + "\nPhone: " + c.phone + "\nSheher: " + c.city + "\nPata: " + c.addr + "\n";
+  if (c.note) t += "Note: " + c.note + "\n";
+  t += "\nPayment: cash on delivery";
+  return t;
+}
+document.getElementById("waTop").addEventListener("click", () => openWa(generalMessage()));
+document.getElementById("waHero").addEventListener("click", e => { e.preventDefault(); openWa(generalMessage()); });
+document.getElementById("waFooter").addEventListener("click", e => { e.preventDefault(); openWa(generalMessage()); });
+
+document.getElementById("sendWa").addEventListener("click", async () => {
+  const err = document.getElementById("err");
+  const c = {
+    name: document.getElementById("cName").value.trim(),
+    phone: document.getElementById("cPhone").value.trim(),
+    city: document.getElementById("cCity").value.trim(),
+    addr: document.getElementById("cAddr").value.trim(),
+    note: document.getElementById("cNote").value.trim()
+  };
+  if (!cartLines().length){ err.textContent = "Slip khaali hai — pehle koi item daalein."; return; }
+  if (!c.name){ err.textContent = "Naam likh dein."; return; }
+  if (c.phone.replace(/\D/g, "").length < 10){ err.textContent = "Poora phone number likhein, jaise 03001234567."; return; }
+  if (!c.addr){ err.textContent = "Delivery ka pata likh dein."; return; }
+  err.textContent = "";
+  const text = orderMessage(c);
+  openWa(text);   // pehle kholte hain, warna popup block ho jata hai
+  await saveOrder(c, text, cartLines().map(l => ({ sku:l.p.sku, name:l.p.name, qty:l.qty, price:l.p.price })), cartTotal());
+});
+
+/* ---- Supabase (optional) ---- */
+const sbReady = () => Boolean(SUPABASE.url && SUPABASE.anonKey);
+function sbFetch(path, options){
+  const o = options || {};
+  const headers = Object.assign({
+    "apikey": SUPABASE.anonKey,
+    "Authorization": "Bearer " + SUPABASE.anonKey,
+    "Content-Type": "application/json"
+  }, o.headers || {});
+  return fetch(SUPABASE.url.replace(/\/$/, "") + "/rest/v1/" + path, Object.assign({}, o, { headers: headers }));
+}
+async function loadProducts(){
+  if (!sbReady()) return;
+  try {
+    const r = await sbFetch("products?select=sku,name,sub,cat,price,specs,active&active=eq.true&order=sku");
+    if (!r.ok) return;
+    const rows = await r.json();
+    if (Array.isArray(rows) && rows.length){
+      PRODUCTS = rows;
+      document.getElementById("factCount").textContent = rows.length;
+      renderGrid(); renderSlip();
+    }
+  } catch (e) { /* local list chalti rahegi */ }
+}
+async function saveOrder(c, text, items, total){
+  if (!sbReady()) return;
+  try {
+    await sbFetch("orders", {
+      method: "POST",
+      headers: { "Prefer": "return=minimal" },
+      body: JSON.stringify([{
+        customer_name: c.name || "WhatsApp se", phone: c.phone, city: c.city,
+        address: c.addr, note: c.note, total: total, items: items, message: text
+      }])
+    });
+  } catch (e) { /* order phir bhi WhatsApp par chala jayega */ }
+}
+
+/* ---- boot ---- */
+document.getElementById("q").addEventListener("input", e => { query = e.target.value; renderGrid(); });
+document.getElementById("footPhone").textContent = STORE.phoneDisplay;
+document.getElementById("factPhone").textContent = STORE.phoneDisplay;
+document.getElementById("yr").textContent = new Date().getFullYear();
+document.getElementById("factCount").textContent = PRODUCTS.length;
+renderChrome(); renderGrid(); renderSlip(); loadProducts();
+</script>
+</body>
+</html>
